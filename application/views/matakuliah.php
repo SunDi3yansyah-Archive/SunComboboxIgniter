@@ -46,7 +46,7 @@ $(document).ready(function() {
     echo "<select name='id_matakuliah' id='id_matakuliah'>";
     if(isset($_POST['id_matakuliah'])) {
       $mapel = $this->model_makul->getMakul($_POST['id_semester']);
-      $data .= "<option value=''>--Pilih--</option>";
+      $data .= "<option value=''>-- Pilih Mata Kuliah --</option>";
       foreach ($mapel as $mp) {
         if($mp['id_matakuliah'] == $_POST['id_matakuliah']){
           $data .= "<option value='$mp[id_matakuliah]' selected>$mp[nama_matakuliah]</option>\n";
